@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rimraf .ouput/node",
+    "prebuild": "rimraf .output/node",
     "build": "tsc",
-    "start": "node ./.ouput/node/index.js",
+    "start": "node ./.output/node/index.js",
     "dev": "npm run prebuild && tsc-watch --onSuccess \"npm run start\""
   },
   "keywords": [],
