@@ -51,8 +51,6 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 ### Goal
 
 Build WhatsApp API Service with `Baileys` that can:
