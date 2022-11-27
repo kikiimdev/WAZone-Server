@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/kim-dev-git/WAZone-Server">
-    <img src="https://github.com/kim-dev-git/WAZone-Web/blob/main/docs/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/kim-dev-git/WAZone-Web/blob/main/docs/logo.png" alt="Logo" width="240" height="60">
   </a>
 
 <h3 align="center">WAZONE - Server</h3>
