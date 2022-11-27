@@ -68,7 +68,7 @@ Build WhatsApp API Service with `Baileys` that can:
 
 - [![Node][node.js]][node-url]
 - [![Express][express.js]][express-url]
-- [![TypeORM][typeorm.js]][typeorm-url]
+- [![Prisma][prisma.js]][prisma-url]
 - [![Baileys][baileys.js]][baileys-url]
 - [![Typescript][typescript.js]][typescript-url]
 
@@ -117,10 +117,26 @@ To get a local copy up and running follow these simple example steps.
    npm install
    ```
 4. For the `.env` file you can create or copy it from`.env.example`
+
    ```env
    PORT=5000
-   DATABASE_URL="file:./wazone.db?connection_limit=1"
+   DATABASE_URL="file:./wazone.db?connection_limit=1" // SQLite
+   # DATABASE_URL="mysql://johndoe:randompassword@localhost:3306/mydb" // Use this if want to use MySQL/PostgreSQL
    ```
+
+   If you want to change db provider (MySQL/PostgreSQL) edit `prisma/schema.prisma`
+
+   ```sh
+   generator client {
+    provider = "prisma-client-js"
+   }
+
+   datasource db {
+    provider = "sqlite" // (mysql/postgresql) <== change this
+    url      = env("DATABASE_URL")
+   }
+   ```
+
 5. Initialize the database
    ```sh
    npx prisma db push
@@ -276,5 +292,7 @@ Project Link: [https://github.com/kim-dev-git/WAZone-Server](https://github.com/
 [vue-url]: https://vuejs.org/
 [vite.js]: https://img.shields.io/badge/Vite-35495E?style=for-the-badge&logo=vite&logoColor=4FC08D
 [vite-url]: https://vite.org/
+[prisma.js]: https://img.shields.io/badge/Prisma-35495E?style=for-the-badge&logo=prisma&logoColor=4FC08D
+[prisma-url]: https://prisma.io/
 [typescript.js]: https://img.shields.io/badge/Typescript-35495E?style=for-the-badge&logo=typescript&logoColor=4FC08D
 [typescript-url]: https://typescript.org/
